@@ -1,0 +1,191 @@
+.projectsHero {
+    padding: 8rem 0 4rem; /* Adjusted padding */
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    text-align: center;
+    /* Added a subtle gradient */
+    background: linear-gradient(135deg, var(--color-dark-blue) 0%, #081d36 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  }
+  
+  .projectsTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
+  }
+  
+  .projectsSubtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  
+  .projectsContent {
+    padding: 4rem 0; /* Adjusted padding */
+  }
+  
+  .projectsFilter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .filterButton {
+    padding: 0.6rem 1.2rem;
+    background-color: transparent;
+    border: 1px solid var(--color-medium-gray);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-dark-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filterButton:hover {
+    background-color: var(--color-light-gray);
+  }
+  
+  .filterButton.active {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border-color: var(--color-dark-green);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .projectCard {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    background-color: var(--color-white); /* Added background color */
+    border-radius: 8px; /* Added border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+    padding: 2rem; /* Added padding */
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  .projectCard:nth-child(even) {
+    direction: ltr; /* Changed to ltr */
+  }
+  
+  .projectCard:nth-child(even) .projectImages {
+    order: 0; /* Reset order */
+  }
+  
+  .projectCard:nth-child(even) .projectInfo {
+    direction: ltr;
+  }
+  
+  .projectImages {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .desktopPreview {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .desktopPreview:hover {
+    transform: scale(1.03); /* Slight scale on hover */
+  }
+  
+  .desktopPreview img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .mobilePreview {
+    position: absolute;
+    width: 120px;
+    right: 0;
+    bottom: -20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .mobilePreview:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
+  .mobilePreview img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .projectInfo h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .projectInfo p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--color-dark-gray);
+  }
+  
+  .projectActions {
+    margin-top: 1.5rem;
+  }
+  
+  @media (max-width: 992px) {
+    .projectCard {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .projectCard:nth-child(even) {
+      direction: ltr;
+    }
+    
+    .projectImages {
+      margin: 0 auto;
+      max-width: 500px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .projectsTitle {
+      font-size: 2.5rem;
+    }
+    
+    .projectsFilter {
+      gap: 0.5rem;
+    }
+    
+    .filterButton {
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+    }
+    
+    .mobilePreview {
+      width: 80px;
+      right: 10px;
+      bottom: -10px;
+    }
+  }

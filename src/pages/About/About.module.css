@@ -1,0 +1,223 @@
+.aboutHero {
+    padding: 8rem 0 4rem; /* Adjusted padding */
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    text-align: center;
+    /* Added a subtle gradient */
+    background: linear-gradient(135deg, var(--color-dark-blue) 0%, #081d36 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  }
+  
+  .aboutTitle {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow */
+  }
+  
+  .aboutSubtitle {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  
+  .aboutContent {
+    padding: 4rem 0; /* Adjusted padding */
+  }
+  
+  .aboutGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .aboutText h2 {
+    font-size: 2rem;
+    color: var(--color-dark-blue);
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+  }
+  
+  .aboutText h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-dark-green);
+  }
+  
+  .aboutText p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: var(--color-dark-gray);
+  }
+  
+  .aboutImage img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .aboutImage img:hover {
+    transform: scale(1.03); /* Slight scale on hover */
+  }
+  
+  .missionVisionValues {
+    padding: 4rem 0; /* Adjusted padding */
+    background-color: var(--color-light-gray);
+  }
+  
+  .mvvGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .mvvCard {
+    background-color: var(--color-white);
+    padding: 2.5rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    height: 100%;
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .mvvCard:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+  }
+  
+  .mvvIcon {
+    font-size: 3rem;
+    color: var(--color-dark-green);
+    margin-bottom: 1.5rem;
+  }
+  
+  .mvvCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .mvvCard p {
+    color: var(--color-dark-gray);
+    line-height: 1.6;
+  }
+  
+  .mvvCard ul {
+    text-align: left;
+    padding-left: 1.5rem;
+    color: var(--color-dark-gray);
+  }
+  
+  .mvvCard ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+  
+  .team {
+    padding: 4rem 0; /* Adjusted padding */
+  }
+  
+  .teamGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .teamCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .teamCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .teamImage {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+  }
+  
+  .teamImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .teamCard:hover .teamImage img {
+    transform: scale(1.05);
+  }
+  
+  .teamInfo {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  
+  .teamInfo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .teamRole {
+    color: var(--color-dark-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .teamDescription {
+    color: var(--color-dark-gray);
+    line-height: 1.6;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 992px) {
+    .mvvGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .teamGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .aboutGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .aboutImage {
+      order: -1;
+      margin-bottom: 2rem;
+    }
+    
+    .mvvGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .teamGrid {
+      grid-template-columns: 1fr;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .aboutTitle {
+      font-size: 2.5rem;
+    }
+  }

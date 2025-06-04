@@ -1,0 +1,264 @@
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 90vh; /* Reduced height to fit better */
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-dark-green) 100%);
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .heroContent {
+    width: 50%;
+    padding: 0 3rem; /* Increased padding for better spacing */
+    z-index: 2;
+  }
+  
+  .heroTitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Added text shadow for depth */
+  }
+  
+  .heroTitle span {
+    color: #a3e635;
+    position: relative;
+  }
+  
+  .heroTitle span::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background-color: rgba(163, 230, 53, 0.3);
+    z-index: -1;
+  }
+  
+  .heroSubtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    opacity: 0.9;
+  }
+  
+  .heroCta {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .heroImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+  
+  .heroImage img {
+    max-width: 90%; /* Reduced image size to fit better */
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* Added transition for smooth hover effect */
+  }
+  
+  .heroImage img:hover {
+    transform: scale(1.05); /* Slight scale on hover */
+  }
+  
+  .services {
+    padding: 6rem 0;
+    background-color: var(--color-light-gray);
+  }
+  
+  .servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .serviceCard {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .serviceIcon {
+    font-size: 2.5rem;
+    color: var(--color-dark-green);
+    margin-bottom: 1.5rem;
+  }
+  
+  .serviceCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .serviceCard p {
+    color: var(--color-dark-gray);
+    line-height: 1.6;
+  }
+  
+  .cta {
+    padding: 5rem 0;
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    /* Added a subtle gradient */
+    background: linear-gradient(135deg, var(--color-dark-green) 0%, #134a13 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for depth */
+  }
+  
+  .ctaContent {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .ctaContent h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Added text shadow */
+  }
+  
+  .ctaContent p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .featuredProjects {
+    padding: 6rem 0;
+    background-color: var(--color-white);
+  }
+  
+  .projectsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  
+  .projectCard {
+    background-color: var(--color-white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .projectCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .projectImage {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+  }
+  
+  .projectImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .projectCard:hover .projectImage img {
+    transform: scale(1.05);
+  }
+  
+  .projectInfo {
+    padding: 1.5rem;
+  }
+  
+  .projectInfo h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .projectInfo p {
+    color: var(--color-dark-gray);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .projectLink {
+    color: var(--color-dark-green);
+    font-weight: 600;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .projectLink::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-dark-green);
+    transition: width 0.3s ease;
+  }
+  
+  .projectLink:hover::after {
+    width: 100%;
+  }
+  
+  .viewAllProjects {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  @media (max-width: 992px) {
+    .servicesGrid,
+    .projectsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      padding: 6rem 0 3rem; /* Adjusted padding */
+    }
+    
+    .heroContent,
+    .heroImage {
+      width: 100%;
+    }
+    
+    .heroContent {
+      margin-bottom: 2rem; /* Adjusted margin */
+      padding: 0 2rem; /* Adjusted padding */
+    }
+    
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+    
+    .heroCta {
+      justify-content: center;
+    }
+    
+    .servicesGrid,
+    .projectsGrid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }

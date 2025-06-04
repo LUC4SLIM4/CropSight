@@ -1,0 +1,120 @@
+.footer {
+    background-color: var(--color-dark-blue);
+    color: var(--color-white);
+    padding: 4rem 0 1.5rem;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  
+  .footerContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footerInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .footerLogo img {
+    height: 40px;
+    width: auto;
+  }
+  
+  .footerDescription {
+    max-width: 400px;
+    line-height: 1.6;
+    color: var(--color-medium-gray);
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .socialLinks a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    font-size: 1.2rem;
+    transition: var(--transition-fast);
+  }
+  
+  .socialLinks a:hover {
+    background-color: var(--color-dark-green);
+    transform: translateY(-3px);
+  }
+  
+  .footerLinks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .linkColumn h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  
+  .linkColumn h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-dark-green);
+  }
+  
+  .linkColumn ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .linkColumn a, .linkColumn span {
+    color: var(--color-medium-gray);
+    transition: var(--transition-fast);
+  }
+  
+  .linkColumn a:hover {
+    color: var(--color-white);
+  }
+  
+  .contactIcon {
+    margin-right: 0.5rem;
+    color: var(--color-dark-green);
+  }
+  
+  .footerBottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-medium-gray);
+  }
+  
+  @media (max-width: 768px) {
+    .footerContent {
+      grid-template-columns: 1fr;
+    }
+    
+    .footerLinks {
+      grid-template-columns: 1fr;
+    }
+  }
